@@ -5,15 +5,15 @@ import {
   Redirect,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import TestList from './pages/TestList';
+import Posts from './pages/Posts';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/testlist">
-            <TestList />
+          <Route path="/posts">
+            <Posts />
           </Route>
         </Switch>
       </Router>
