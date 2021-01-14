@@ -1,21 +1,24 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import {
   Switch,
   Route,
   Redirect,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import Posts from './pages/Posts';
+
+const Posts = lazy(() => import('./pages/Posts'));
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route path="/posts">
-            <Posts />
-          </Route>
-        </Switch>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route path="/posts">
+              <Posts />
+            </Route>
+          </Switch>
+        </Suspense>
       </Router>
     </div>
   );
