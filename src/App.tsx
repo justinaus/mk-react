@@ -5,6 +5,7 @@ import {
   Redirect,
   BrowserRouter as Router,
 } from 'react-router-dom';
+import CountTest from './pages/CountTest';
 
 const Posts = lazy(() => import('./pages/Posts'));
 
@@ -16,6 +17,9 @@ function App() {
           <Switch>
             <Route path="/posts">
               <Posts />
+            </Route>
+            <Route path="/countTest">
+              <CountTest />
             </Route>
           </Switch>
         </Suspense>
