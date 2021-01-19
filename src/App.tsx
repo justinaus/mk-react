@@ -5,9 +5,9 @@ import {
   Redirect,
   BrowserRouter as Router,
 } from 'react-router-dom';
-import CountTest from './pages/CountTest';
 
 const Posts = lazy(() => import('./pages/Posts'));
+const CountTest = lazy(() => import('./pages/CountTest'));
 
 function App() {
   return (
