@@ -1,8 +1,8 @@
 import { Observer } from 'mobx-react';
 import React, { useEffect } from 'react';
-import BasicTable from '../components/common/tables/BasicTable';
-import ApiPath from '../services/ApiPath';
-import TableListStore from '../stores/TableListStore';
+import BasicTable from '../../components/common/tables/BasicTable';
+import ApiPath from '../../services/ApiPath';
+import TableListStore from '../../stores/TableListStore';
 
 export default function Posts() {
   useEffect(() => {

@@ -6,7 +6,7 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 
-const Posts = lazy(() => import('./pages/Posts'));
+const Posts = lazy(() => import('./pages/post/Posts'));
 const CountTest = lazy(() => import('./pages/CountTest'));
 
 function App() {
