@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -9,7 +9,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
 interface Props {
-  rows: any[];
+  rowDatas: any[];
+  headRow: ReactNode;
+  rows: ReactNode;
 }
 
 const useStyles = makeStyles({
@@ -18,32 +20,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BasicTable({ rows }: Props) {
+export default function BasicTable({ rowDatas, rows, headRow }: Props) {
   const classes = useStyles();
 
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>userId</TableCell>
-            <TableCell>id</TableCell>
-            <TableCell>title</TableCell>
-            <TableCell>body</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.id}>
-              <TableCell component="th" scope="row">
-                {row.userId}
-              </TableCell>
-              <TableCell align="right">{row.id}</TableCell>
-              <TableCell>{row.title}</TableCell>
-              <TableCell>{row.body}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
+        <TableHead>{headRow}</TableHead>
+        <TableBody>{rows}</TableBody>
       </Table>
     </TableContainer>
   );
