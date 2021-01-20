@@ -4,7 +4,7 @@ import BasicTable from '../../components/common/tables/BasicTable';
 import IPostModel from '../../models/IPostModel';
 import ApiPath from '../../services/ApiPath';
 import TableListStore from '../../stores/TableListStore';
-import PostRow from './PostRow';
+import PostRow from '../../components/post/PostRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 

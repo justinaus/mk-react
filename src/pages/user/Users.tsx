@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import BasicTable from '../../components/common/tables/BasicTable';
 import ApiPath from '../../services/ApiPath';
 import TableListStore from '../../stores/TableListStore';
-import UserRow from './UserRow';
+import UserRow from '../../components/user/UserRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import IUserModel from '../../models/IUserModel';
