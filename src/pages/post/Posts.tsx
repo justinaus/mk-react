@@ -7,6 +7,7 @@ import TableListStore from '../../stores/TableListStore';
 import PostRow from '../../components/post/PostRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
+import PostFilter from '../../components/post/PostFilter';
 
 export default function Posts() {
   useEffect(() => {
@@ -38,6 +39,7 @@ export default function Posts() {
 
   return (
     <div>
+      <PostFilter />
       <Observer>
         {() => (
           <BasicTable
