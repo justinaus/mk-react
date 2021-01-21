@@ -1,7 +1,7 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import IPostModel from '../../models/IPostModel';
+import IPostModel from '../../interfaces/IPostModel';
 
 interface Props {
   model: IPostModel;

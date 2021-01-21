@@ -1,7 +1,7 @@
 import { Observer } from 'mobx-react';
 import React, { useEffect } from 'react';
 import BasicTable from '../../components/common/tables/BasicTable';
-import IPostModel from '../../models/IPostModel';
+import IPostModel from '../../interfaces/IPostModel';
 import ApiPath from '../../services/ApiPath';
 import TableListStore from '../../stores/TableListStore';
 import PostRow from '../../components/post/PostRow';
@@ -38,7 +38,6 @@ export default function Posts() {
 
   return (
     <div>
-      List Page
       <Observer>
         {() => (
           <BasicTable

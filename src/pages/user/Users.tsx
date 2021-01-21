@@ -6,7 +6,7 @@ import TableListStore from '../../stores/TableListStore';
 import UserRow from '../../components/user/UserRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
-import IUserModel from '../../models/IUserModel';
+import IUserModel from '../../interfaces/IUserModel';
 
 export default function Users() {
   useEffect(() => {

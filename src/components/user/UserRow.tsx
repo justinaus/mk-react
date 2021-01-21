@@ -1,7 +1,7 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import IUserModel from '../../models/IUserModel';
+import IUserModel from '../../interfaces/IUserModel';
 
 interface Props {
   model: IUserModel;
