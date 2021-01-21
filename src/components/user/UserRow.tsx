@@ -1,10 +1,10 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import IUserModel from '../../interfaces/IUserModel';
+import User from '../../interfaces/user.interface';
 
 interface Props {
-  model: IUserModel;
+  model: User;
 }
 
 export default function UserRow({ model }: Props) {

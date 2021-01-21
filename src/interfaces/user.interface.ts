@@ -1,4 +1,4 @@
-interface IUserModel {
+interface User {
   id: number;
   name: string;
   username: string;
@@ -33,4 +33,4 @@ interface IUserModel {
 //     }
 //   },
 
-export default IUserModel;
+export default User;

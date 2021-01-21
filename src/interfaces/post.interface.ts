@@ -1,8 +1,8 @@
-interface IPostModel {
+interface Post {
   id: number;
   userId: number;
   title: string;
   body: string;
 }
 
-export default IPostModel;
+export default Post;

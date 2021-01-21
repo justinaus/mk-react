@@ -6,7 +6,7 @@ import TableListStore from '../../stores/TableListStore';
 import UserRow from '../../components/user/UserRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
-import IUserModel from '../../interfaces/IUserModel';
+import User from '../../interfaces/user.interface';
 
 export default function Users() {
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Users() {
   const Rows = ({ datas }: any) => {
     return (
       <>
-        {datas.map((item: IUserModel) => {
+        {datas.map((item: User) => {
           return <UserRow model={item} key={item.id} />;
         })}
       </>

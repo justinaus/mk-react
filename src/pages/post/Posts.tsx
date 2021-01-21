@@ -1,7 +1,7 @@
 import { Observer } from 'mobx-react';
 import React, { useEffect } from 'react';
 import BasicTable from '../../components/common/tables/BasicTable';
-import IPostModel from '../../interfaces/IPostModel';
+import Post from '../../interfaces/post.interface';
 import ApiPath from '../../services/ApiPath';
 import TableListStore from '../../stores/TableListStore';
 import PostRow from '../../components/post/PostRow';
@@ -18,7 +18,7 @@ export default function Posts() {
   const Rows = ({ datas }: any) => {
     return (
       <>
-        {datas.map((item: IPostModel) => {
+        {datas.map((item: Post) => {
           return <PostRow model={item} key={item.id} />;
         })}
       </>

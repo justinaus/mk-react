@@ -1,10 +1,10 @@
 import React from 'react';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-import IPostModel from '../../interfaces/IPostModel';
+import Post from '../../interfaces/post.interface';
 
 interface Props {
-  model: IPostModel;
+  model: Post;
 }
 
 export default function PostRow({ model }: Props) {
