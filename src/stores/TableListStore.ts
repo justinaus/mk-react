@@ -8,9 +8,11 @@ class TableListStore {
     makeAutoObservable(this);
   }
 
-  getData(path: string) {
+  getData(path: string, params?: any) {
     http
-      .get(path)
+      .get(path, {
+        params: params,
+      })
       .then((response) => {
         const { data } = response;
 
