@@ -6,15 +6,15 @@ import PostFilter from '../../interfaces/postFilter.interface';
 const radioUserIdDatas: Radio[] = [
   {
     label: 'User1',
-    value: 'user1',
+    value: '1',
   },
   {
     label: 'User2',
-    value: 'user2',
+    value: '2',
   },
   {
     label: 'User3',
-    value: 'user3',
+    value: '3',
     disabled: true,
   },
 ];
@@ -41,7 +41,7 @@ const checkboxTestDatas: Checkbox[] = [
 const initialState = {
   radioUserIdDatas: radioUserIdDatas,
   checkboxTestDatas: checkboxTestDatas,
-  userId: 'user1',
+  userId: '2',
 };
 
 class PostFilterStore {
