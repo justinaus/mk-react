@@ -8,6 +8,7 @@ import PostRow from '../../components/post/PostRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import PostFilter from '../../components/post/PostFilter';
+import IPostFilter from '../../interfaces/postFilter.interface';
 
 export default function Posts() {
   useEffect(() => {
@@ -37,9 +38,13 @@ export default function Posts() {
     );
   };
 
+  const onChangeFilter = (params: IPostFilter) => {
+    console.log(params);
+  };
+
   return (
     <div>
-      <PostFilter />
+      <PostFilter onChange={onChangeFilter} />
       <Observer>
         {() => (
           <BasicTable
