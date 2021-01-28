@@ -1,6 +1,6 @@
 import { Observer } from 'mobx-react';
 import React from 'react';
-import PostFilterStore from '../../stores/PostFilterStore';
+import PostFilterStore from '../../stores/post/PostFilterStore';
 import Checkbox from '../common/checkboxes/checkbox.interface';
 import CheckboxForm from '../common/checkboxes/CheckboxForm';
 

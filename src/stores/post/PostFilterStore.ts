@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import Checkbox from '../components/common/checkboxes/checkbox.interface';
+import Checkbox from '../../components/common/checkboxes/checkbox.interface';
 
 const checkboxDatas: Checkbox[] = [
   {
