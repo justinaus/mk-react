@@ -39,7 +39,7 @@ export default function Posts() {
   };
 
   const onChangeFilter = (params: IPostFilter) => {
-    console.log(params);
+    TableListStore.getData(ApiPath.posts, params);
   };
 
   return (
