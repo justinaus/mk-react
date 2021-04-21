@@ -1,11 +1,22 @@
 import { makeAutoObservable, runInAction } from 'mobx';
+import { PageEvent, PageEventEnum } from '../events/PageEvent';
 import http from '../services/http';
+import { PaginationStore } from './PaginationStore';
 
 class TableListStore {
   list = [];
 
+  paginationStore = new PaginationStore();
+
   constructor() {
     makeAutoObservable(this);
+
+    this.paginationStore.addEventListener(
+      PageEventEnum.Change,
+      (event: PageEvent) => {
+        console.log('page changed!', event.page, event.total, event.target);
+      },
+    );
   }
 
   getData(path: string, params?: any) {
@@ -18,6 +29,9 @@ class TableListStore {
 
         runInAction(() => {
           this.list = data;
+
+          // TEST.
+          this.paginationStore.page = 3;
         });
       })
       .catch((error) => {
