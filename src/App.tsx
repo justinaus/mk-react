@@ -5,6 +5,7 @@ import {
   Redirect,
   BrowserRouter as Router,
 } from 'react-router-dom';
+import { ModalTest } from './pages/ModalTest';
 import RouterPath from './RouterPath';
 
 const Posts = lazy(() => import('./pages/post/Posts'));
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route path="/countTest">
               <CountTest />
+            </Route>
+            <Route path="/modalTest">
+              <ModalTest />
             </Route>
           </Switch>
         </Suspense>

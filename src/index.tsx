@@ -4,6 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
+import { Modals } from './components/Modals';
 
 const theme = createMuiTheme({
   overrides: {
@@ -16,11 +17,10 @@ const theme = createMuiTheme({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <App />
+    <Modals />
+  </ThemeProvider>,
   document.getElementById('root'),
 );
 
